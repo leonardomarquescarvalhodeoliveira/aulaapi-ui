@@ -17,12 +17,11 @@
   </div>
   <div class="ui-g">
     <div class="ui-g-12">
-      <p-table [value]="categorias">
+      <p-table [value]="categorias" [responsive]="true">
         <ng-template pTemplate="header">
           <tr>
             <th class="col-id-header">#</th>
             <th>Nome da Categoria</th>
-            <th class="col-acoes-header"></th>
             <th class="col-acoes-header"></th>
           </tr>
         </ng-template>
@@ -31,11 +30,10 @@
             <td class="col-id">{{cat.id}}</td>
             <td>{{cat.nome}}</td>
             <td class="col-acoes">
-              <button pButton icon="pi pi-pencil"></button>
+              <button pButton icon="pi pi-pencil" pTooltip="Editar" tooltipPosition="top"></button>
+              <button pButton icon="pi pi-trash" pTooltip="Excluir" tooltipPosition="top" ></button>
             </td>
-            <td class="col-acoes">
-                <button pButton icon="pi pi-trash"></button>
-            </td>
+      
           </tr>
         </ng-template>
       </p-table>
